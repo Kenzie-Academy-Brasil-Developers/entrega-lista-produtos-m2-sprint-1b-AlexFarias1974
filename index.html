@@ -13,15 +13,27 @@
     <!-- CABEÇALHO -->
     <header>
         <div id="filters" class="filtersContainer">
-            
-            <button class="estiloGeralBotoes estiloGeralBotoes--mostrarTodos">Mostrar Todos</button>
-            <button class="estiloGeralBotoes estiloGeralBotoes--filtrarHortifruti">Mostrar Hortifruti</button>
-
+            <div class="botoes">
+                <button class="estiloGeralBotoes estiloGeralBotoes--mostrarTodos" data-section="todos">Mostrar Todos</button>
+                <button class="estiloGeralBotoes estiloGeralBotoes--filtrarHortifruti" data-section="Hortifruti">Hortifruti</button>
+                <button class="estiloGeralBotoes estiloGeralBotoes--filtrarPanificadora" data-section="Panificadora">Panificadora</button>
+                <button class="estiloGeralBotoes estiloGeralBotoes--filtrarLaticinios" data-section="Laticínio">Laticínios</button>
+            </div>
             <div class="containerBuscaPorNome">
                 
-                <input type="text" placeholder="Nome do produto" class="campoBuscaPorNome">
-                <button class="estiloGeralBotoes estiloGeralBotoes--botaoBuscaPorNome">Buscar</button>
+                <input type="search" placeholder="Pesquisar por" class="campoBuscaPorNome">
+                <button id="btnSearch" class="estiloGeralBotoes estiloGeralBotoes--botaoBuscaPorNome">Buscar</button>
 
+            </div>
+            
+        </div>
+        <div id="valor__total">
+            <div class="estiloValorTotal">
+                <img class="icone__alerta" src="/src/img/alert-circle.png" alt="Icone de alerta">
+                <p>Valor total dos produtos da sessão selecionada</p>
+            </div>
+            <div>
+                <p class="valor__total">R$ 20.00</p>
             </div>
         </div>
     </header>
@@ -29,24 +41,13 @@
     <main>
         <div class="containerListaProdutos" id="listProdutos">
             <ul>
-            <!-- Utilize esse item html como template para a construção da lista de produtos -->
+            
+                <!-- DOM -->
 
-            <!-- Você pode remover esses comentários depois que fizer a construção pelo DOM -->
-
-            <!--
-                <li>
-                    <img src="./src/img/maça.png" alt="Imagem maçã">
-                    <h3>Maçã</h3>
-                    <p>R$02.00</p>
-                    <span>Seção - Hortifruti</span>
-                </li>
-            -->
             </ul>
         </div>
 
-        <div class="containerPrecoTotal">
-            <p>Preço total: R$<span id="precoTotal">00.00</span></p>
-        </div>
+        
     </main>
 
     <script src="src/js/dataProdutos.js"></script>

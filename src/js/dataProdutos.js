@@ -1,37 +1,58 @@
 const produtos = [
     {
         nome: 'Banana',
-        preco: 2,
+        preco: 4,
         secao: 'Hortifruti',
         categoria: 'fruta',
         img: "./src/img/banana.png"
     },
     {
         nome: 'Morango',
-        preco: 2,
+        preco: 22,
         secao: 'Hortifruti',
         categoria: 'fruta',
-        img: './src/img/morango.png'
+        img: './src/img/strawberry.png'
     },
     {
         nome: 'Maçã',
-        preco: 2,
+        preco: 8,
         secao: 'Hortifruti',
         categoria: 'fruta',
-        img: './src/img/maça.png'
+        img: './src/img/apple.png'
     },
     {
         nome: 'Pão',
-        preco: 4,
+        preco: 7.5,
         secao: 'Panificadora',
         categoria: 'Pães',
-        img: './src/img/pao.png'
+        img: './src/img/bread.png'
     },
     {
         nome: 'Leite',
-        preco: 5,
+        preco: 7,
         secao: 'Laticínio',
         categoria: 'Leite',
-        img: './src/img/leite.png'
+        img: './src/img/milk.png'
+    },
+    {
+        nome: 'Yogurt de Morango',
+        preco: 8,
+        secao: 'Laticínio',
+        categoria: 'Leite',
+        img: './src/img/yogurt.png'
+    },
+    {
+        nome: 'Torta de Maçã',
+        preco: 8,
+        secao: 'Panificadora',
+        categoria: 'Sobremesa',
+        img: './src/img/applepie.png'
+    },
+    {
+        nome: 'Bolo',
+        preco: 9,
+        secao: 'Panificadora',
+        categoria: 'Sobremesa',
+        img: './src/img/cake.png'
     }
 ]

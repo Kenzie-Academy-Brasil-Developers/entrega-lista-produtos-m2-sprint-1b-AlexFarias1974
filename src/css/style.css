@@ -1,33 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
+    /* max-width: 1300px; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* CABEÇALHO */
 .filtersContainer {
+    /* width: 100%; */
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     padding: 30px;
 }
 
+.botoes {
+    margin-right: 270px;
+}
 .estiloGeralBotoes{
     border: none;
     font-weight: bold;
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
-    display: block;
+    /* display: block; */
     font-size: 0.9rem;
 }
 
 .estiloGeralBotoes--mostrarTodos {
-    color: black;
-    background-color: #d3d3d3;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #12B886;
+    background: rgba(18, 184, 134, 0.05);
+}
+
+.estiloGeralBotoes--mostrarTodos:hover {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+    background: #12B886;
 }
 
 .estiloGeralBotoes--filtrarHortifruti {
-    background-color: tomato;
-    color: white;
+    color: #12B886;
+    background: rgba(18, 184, 134, 0.05);
+}
+
+.estiloGeralBotoes--filtrarHortifruti:hover {
+    color: #FFFFFF;
+    background: #12B886;
+}
+
+.estiloGeralBotoes--filtrarPanificadora {
+    color: #12B886;
+    background: rgba(18, 184, 134, 0.05);
+}
+
+.estiloGeralBotoes--filtrarPanificadora:hover {
+    color: #FFFFFF;
+    background: #12B886;
+}
+
+.estiloGeralBotoes--filtrarLaticinios {
+    color: #12B886;
+    background: rgba(18, 184, 134, 0.05);
+}
+
+.estiloGeralBotoes--filtrarLaticinios:hover {
+    color: #FFFFFF;
+    background: #12B886;
+}
+
+#valor__total {
+    display: flex;
+    flex-direction: row;
+    height: 56px;
+    padding: 15px;
+    width: auto;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.icone__alerta {
+    width: 25px;
+    height: 25px;;
+}
+
+.estiloValorTotal {
+    display: flex
+}
+
+.estiloValorTotal p {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-left: 10px;
 }
 
 .containerBuscaPorNome {
@@ -37,63 +118,123 @@ body {
 
 .campoBuscaPorNome {
     border-radius: 5px 0 0 5px;
-    border: 1px solid black;
+    border: none;
     padding: 0 10px;
+    width: 40px;
+    background-color: #F1F3F5;
+    transition: all 0.5s linear;
+}
+
+.campoBuscaPorNome:focus {
+    border-radius: 5px 0 0 5px;
+    border: none;
+    padding: 0 10px;
+    background: url(/src/img/icons8-search-64.png) no-repeat center right;
+    background-color: #F1F3F5;
+    width: 200px;
+
 }
 
 .estiloGeralBotoes--botaoBuscaPorNome {
-    background-color: rgb(17, 17, 20);
+    background: #12B886;
     color: white;
     border-radius: 0 5px 5px 0;
+}
+
+.estiloGeralBotoes--botaoBuscaPorNome:hover {
+    background: rgba(18, 184, 134, 0.05);
+    color: #12B886;
+}
+
+.valor__total {
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+    width: 80px;
+
 }
 
 /* CONTEÚDO */
 main{}
 
+li img {
+    width: 274px;
+}
+
 .containerListaProdutos {
     width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+    display: flex;
+    /* max-width: 800px; */
+    /* margin: 0 auto; */
 }
 
 .containerListaProdutos ul {
-    list-style: none;
-    text-align: center;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
     justify-content: center;
+    padding-top: 30px;
 }
 
 .containerListaProdutos ul li {
     color: black;
     font-weight: bold;
-    padding: 20px;
-    margin: 10px;
+    /* padding: 20px; */
+    margin: 20px;
     border-radius: 5px;
     transition: ease-in-out .1s;
-    width: 20%;
+    width: 274px;
+    height: 260px;
 }
 
 .containerListaProdutos ul li:hover {
     box-shadow: 3px 3px 13px 1px rgb(146 146 146);
 }
 
-.containerListaProdutos ul li img {
+/* .containerListaProdutos ul li img {
     width: 100%;
     max-width: 80px;
-}
+} */
 
 .containerListaProdutos ul li h3 {
-    font-size: 1.5rem;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #212529;
+    margin-top: 12px;
 }
 
 .containerListaProdutos ul li p {
-    font-size: 1.5rem;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #212529;
+    margin-top: 8px;
+
 }
 .containerListaProdutos ul li span {
-    font-size: 0.8rem;
-    font-weight: 500;
-    margin-top: 10px;
-    display: inline-block;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #868E96;
+
 }
 
 /* PREÇO TOTAL */
@@ -104,4 +245,3 @@ main{}
     font-size: 1.4rem;
     font-weight: 600;
 }
-.containerPrecoTotal p span{}
