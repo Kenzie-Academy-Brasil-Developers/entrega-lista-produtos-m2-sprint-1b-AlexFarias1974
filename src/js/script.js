@@ -1,4 +1,3 @@
-
 function createMainCard(market) {
     
     const cardLi = document.createElement("li");
@@ -15,7 +14,6 @@ function createMainCard(market) {
     cardLi.append(imgCard, h3Card, sectionCard,priceCard);
     
     return cardLi;
-    
 }
 
 function assembleData(produtos) {
@@ -27,12 +25,9 @@ function assembleData(produtos) {
         
         const market = produtos[counter];
         
-        
         const cardLi = createMainCard(market);
 
         ulCard.append(cardLi);
-
-
     }
 
 }
@@ -73,8 +68,21 @@ function searchProds(event) {
     })
 
     assembleData(filtered);
-
-
-    console.log(filtered);
 }
 
+
+function totalSum(filtered) {
+    const divTotalSum = document.querySelector("#totalSum");
+    let total = 0;
+    filtered.forEach(function(product) {
+        total += product.preco;
+    });
+    
+    
+    pSum.innerText = `R$ ${market.total.toFixed(2)}`;
+    const pSum = document.createElement("p");
+    divTotalSum.append(pSum);
+
+
+}
+totalSum(total);
