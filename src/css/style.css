@@ -66,6 +66,13 @@ h1 {
 .estiloGeralBotoes--filtrarHortifruti {
     color: #12B886;
     background: rgba(18, 184, 134, 0.05);
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+
 }
 
 .estiloGeralBotoes--filtrarHortifruti:hover {
@@ -76,6 +83,12 @@ h1 {
 .estiloGeralBotoes--filtrarPanificadora {
     color: #12B886;
     background: rgba(18, 184, 134, 0.05);
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
 }
 
 .estiloGeralBotoes--filtrarPanificadora:hover {
@@ -86,6 +99,12 @@ h1 {
 .estiloGeralBotoes--filtrarLaticinios {
     color: #12B886;
     background: rgba(18, 184, 134, 0.05);
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
 }
 
 .estiloGeralBotoes--filtrarLaticinios:hover {
@@ -108,6 +127,7 @@ h1 {
     flex-wrap: wrap;
     list-style: none;
     margin-left: 10%;
+    border-radius: 8px;
     /* justify-content: center; */
     /* padding-top: 30px; */
 }
@@ -176,6 +196,7 @@ h1 {
     letter-spacing: 0em;
     text-align: center;
     width: 80px;
+    border-radius: 5px;
 
 }
 

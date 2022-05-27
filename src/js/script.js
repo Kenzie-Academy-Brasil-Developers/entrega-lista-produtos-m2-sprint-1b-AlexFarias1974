@@ -48,41 +48,56 @@ btnFilterLaticinios.addEventListener("click", filterProds);
 function filterProds(event) {
     const section = event.target.dataset.section;
     const filtered = produtos.filter(function(product) {
+        
         if (section === "todos") {
             return product;
         } else {
             return product.secao === section;
         }
     })
-    assembleData(filtered) 
+
+    assembleData(filtered);
+    totalSum(filtered);
 }
 
 const btnSearch = document.querySelector("#btnSearch");
 btnSearch.addEventListener("click", searchProds);
 
+const schfield = document.querySelector(".campoBuscaPorNome");
+schfield.addEventListener("keydown", searchEnter);
+
 function searchProds(event) {
     const searchField = document.querySelector(".campoBuscaPorNome").value;
 
     const filtered = produtos.filter(function(product){
-        return product.nome.toLowerCase() === searchField.toLowerCase();
+        return product.nome.toLowerCase().includes(searchField.toLowerCase());
     })
-
+    
     assembleData(filtered);
+    
+    totalSum(filtered);
 }
 
+function searchEnter(event) {
+    if (event.code === "Enter") {
+        searchProds(event);
+    }
+}
+
+const divTotalSum = document.querySelector("#totalSum");
+const pSum = document.createElement("p");
+divTotalSum.append(pSum);
+pSum.className = "totalSum";
 
 function totalSum(filtered) {
-    const divTotalSum = document.querySelector("#totalSum");
     let total = 0;
-    filtered.forEach(function(product) {
-        total += product.preco;
+    
+    filtered.forEach(function(produto) {
+        total += produto.preco;
     });
     
-    
-    pSum.innerText = `R$ ${market.total.toFixed(2)}`;
-    const pSum = document.createElement("p");
-    divTotalSum.append(pSum);
+    pSum.innerHTML = `R$ ${total.toFixed(2)}`;
 
 
 }
-totalSum(total);
+totalSum(produtos);
