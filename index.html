@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/css/reset.css">
+    <!-- <link rel="stylesheet" href="./src/css/reset.css"> -->
     <link rel="stylesheet" href="./src/css/style.css">
     <title>Lista de Produtos</title>
 </head>
@@ -23,31 +23,42 @@
             <div class="containerBuscaPorNome">
                 
                 <input type="search" placeholder="Pesquisar por" class="campoBuscaPorNome">
-                <button id="btnSearch" class="estiloGeralBotoes estiloGeralBotoes--botaoBuscaPorNome">Buscar</button>
+                <button id="btnSearch" class="estiloGeralBotoes estiloGeralBotoes--botaoBuscaPorNome"> <img src="./src/img/search.png" height ="19" width="19" alt=""> </button>
 
             </div>
             
         </div>
-        <div id="valor__total">
-            <div class="estiloValorTotal">
-                <img class="icone__alerta" src="/src/img/alert-circle.png" alt="Icone de alerta">
-                <p>Valor total dos produtos da sessão selecionada</p>
-            </div>
-            <div id="totalSum">
-                <!-- DOM -->
-            </div>
-        </div>
+        
     </header>
     
-    <main>
+    <main class="test">
         <div class="containerListaProdutos" id="listProdutos">
-            <ul>
-            
+            <ul class="ulCard">
+                
                 <!-- DOM -->
-
+                
             </ul>
+            <section id="section_cart">
+                <div class="section_cart">
+                    <img src="./src/img/cart.png" class="imgCart" alt="Cart Icon">
+                    <span class="cartTitle">Carrinho</span>
+                </div>
+                <div class="card_Cart">
+                    <!-- DOM -->
+                </div>
+                <section class="total_Cart">
+                    <div class="quantity">
+                        <p class="font_Name">Quantidade</p>
+                        <!-- DOM -->
+                    </div>
+                    <div class="total">
+                        <p class="font_Num">Total</p>
+                        <!-- DOM -->
+                    </div>
+                </section>
+            </section>
         </div>
-
+        
         
     </main>
 
